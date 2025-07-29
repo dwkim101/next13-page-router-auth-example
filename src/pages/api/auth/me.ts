@@ -18,7 +18,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // 외부 API에서 사용자 정보 가져오기
     const user = await authService.getMe(accessToken);
 
-    res.status(200).json({ user });
+    res.status(200).json(user);
 
   } catch (error) {
     console.error('Get user info error:', error);
