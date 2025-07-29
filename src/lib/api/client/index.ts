@@ -26,7 +26,7 @@ authAxios.interceptors.response.use(
         return authAxios(originalRequest);
       } catch (refreshError: any) {
         // 토큰 갱신 실패 시 로그아웃 처리
-        window.location.href = '/signin'; // 로그인 페이지로 리다이렉트
+
         return Promise.reject(refreshError);
       }
     }
